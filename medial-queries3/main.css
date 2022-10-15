@@ -1,3 +1,65 @@
 body {
   background: peachpuff;
 }
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+
+header {
+  width: 100%;
+  height: 5em;
+  margin-bottom: 1em;
+  background-color: gray;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+aside>div {
+  width: 29%;
+  background-color: gray;
+  margin: 1vw;
+}
+main {
+  min-height: 5em;
+  flex-grow: 1;
+  background-color: gray;
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  aside {
+    width: 80%;
+    flex: 4;
+    align-items: center;
+    margin-right: 1em;
+  }
+
+  aside>div {
+    height: 10em;
+  }
+
+  main {
+    flex: 2;
+    margin: 3em;
+  }
+}
